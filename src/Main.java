@@ -29,17 +29,27 @@ public class Main {
             System.out.println("9) Salir");
             System.out.println("**************************************************");
 
-            opcionDeCambio = Integer.parseInt(lectura.nextLine());
-            if(opcionDeCambio == 9 ) {
-                break;
-            }
             try {
+                opcionDeCambio = Integer.parseInt(lectura.nextLine());
+                if(opcionDeCambio == 9 ) {
+                    break;
+                }
+                if (opcionDeCambio < 1 || opcionDeCambio > 8){
+                    System.out.println("Opción inválida. Ingresa una opción del menú");
+                    continue;
+                }
                 System.out.println("Ingresa el valor que deseas convertir: ");
                 cantidadAConvertir = Double.parseDouble(lectura.nextLine());
+
+
                 Moneda moneda = consulta.buscarCambio(opcionDeCambio, cantidadAConvertir);
+                System.out.println("\nEl valor "+cantidadAConvertir+" ["+moneda.base_code()+"] corresponde al valor " +
+                        "final de =>>> "+moneda.conversion_result() + " [" + moneda.target_code() + "]\n");
                 historialDeCambios.add(moneda);
+            }catch (NumberFormatException e) {
+                System.out.println("Entrada no válida. Por favor ingresa un número");
             }catch (Exception e){
-                System.out.println(e.getMessage());
+                System.out.println("Error al procesar la conversión: "+e.getMessage());
             }
         }
         generador.guardarJson(historialDeCambios);

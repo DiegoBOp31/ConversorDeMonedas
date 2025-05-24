@@ -13,39 +13,36 @@ public class ConsultaMoneda {
         switch (eleccionMenu) {//Aquí sólo construimos la URL para hacer el cambio
             case 1:
                  direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/USD/MXN/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/USD/MXN/" + cantidad);
                 break;
             case 2:
                 direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/MXN/USD/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/MXN/USD/" + cantidad);
                 break;
             case 3:
                 direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/USD/ARS/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/USD/ARS/" + cantidad);
                 break;
             case 4:
                 direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/ARS/USD/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/ARS/USD/" + cantidad);
                 break;
             case 5:
                 direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/USD/BRL/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/USD/BRL/" + cantidad);
                 break;
             case 6:
                 direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/BRL/USD/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/BRL/USD/" + cantidad);
                 break;
             case 7:
                 direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/USD/COP/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/USD/COP/" + cantidad);
                 break;
             case 8:
                 direccion = URI
-                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/COP/USD/" + cantidad);
+                        .create("https://v6.exchangerate-api.com/v6/4c64c2279ba23174e7c55f28/pair/COP/USD/" + cantidad);
                 break;
-            default:
-                System.out.println("Esa opción no es válida");
-                return null;
         }
 
 

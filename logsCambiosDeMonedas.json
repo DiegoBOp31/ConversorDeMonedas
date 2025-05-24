@@ -1,3 +1,32 @@
 [
-  null
+  {
+    "base_code": "USD",
+    "target_code": "MXN",
+    "conversion_rate": 19.2772,
+    "conversion_result": 385.544
+  },
+  {
+    "base_code": "MXN",
+    "target_code": "USD",
+    "conversion_rate": 0.05188,
+    "conversion_result": 1.297
+  },
+  {
+    "base_code": "USD",
+    "target_code": "ARS",
+    "conversion_rate": 1137.0,
+    "conversion_result": 45480.0
+  },
+  {
+    "base_code": "ARS",
+    "target_code": "USD",
+    "conversion_rate": 8.7951E-4,
+    "conversion_result": 0.087951
+  },
+  {
+    "base_code": "USD",
+    "target_code": "BRL",
+    "conversion_rate": 5.7062,
+    "conversion_result": 114.124
+  }
 ]
